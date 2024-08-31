@@ -173,17 +173,17 @@ json_data = {
             ],
         },
     },
-    'videoId': 'YNWHR6lMk1c',
+    'videoId': 'ikJzD4-bPTY',
     'playbackContext': {
         'contentPlaybackContext': {
-            'currentUrl': '/watch?v=YNWHR6lMk1c',
+            'currentUrl': '/watch?v=ikJzD4-bPTY',
             'vis': 0,
             'splay': False,
             'autoCaptionsDefaultOn': False,
             'autonavState': 'STATE_NONE',
             'html5Preference': 'HTML5_PREF_WANTS',
             'signatureTimestamp': 19949,
-            'referer': 'https://www.youtube.com/watch?v=YNWHR6lMk1c',
+            'referer': 'https://www.youtube.com/watch?v=ikJzD4-bPTY',
             'lactMilliseconds': '-1',
             'watchAmbientModeContext': {
                 'hasShownAmbientMode': True,
@@ -222,7 +222,8 @@ print(response.text)
 
 
 #short -ß
-os.system(f"ffmpeg -http_persistent 0 -re -ss 05:58:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 9000k -c:a aac -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/sz1s-guq5-m83v-t1ss-5p89")
+#os.system(f"ffmpeg -http_persistent 0 -re -ss 05:58:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p,drawtext=fontfile=_.ttf:text='F B':fontcolor=white:fontsize=130:line_spacing=32:bordercolor=black:borderw=10:box=0:boxcolor=black@0.1:boxborderw=80:x=w-tw-20:y=h-th-20\" -c:v libx264 -g 48 -b:v 9000k -c:a aac -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/sz1s-guq5-m83v-t1ss-5p89")
+os.system(f"ffmpeg -http_persistent 0 -re -ss 00:00:00 -i '{pr}' -max_muxing_queue_size 9999 -threads 4 -vf \"format=yuv420p\" -c:v libx264 -g 48 -b:v 9000k -c:a aac -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/sz7q-qxdz-vbag-fe2q-f438")
 
 
 #os.system(f"ffmpeg -http_persistent 0 -ss 10:00:00 -re -i '{pr}' -threads 4 -vcodec copy -c:a copy -preset ultrafast -tune zerolatency -f flv rtmp://a.rtmp.youtube.com/live2/u151-yfj5-6g19-c006-a0js")
